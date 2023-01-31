@@ -40,12 +40,12 @@ def get_totals(data: pd.DataFrame, subtotal_columns: list, aggregate_dict: dict)
         # combine all results, drop dummy column, and replace NaN with 'Total'
         return pd.concat(container).drop(DUMMY_COLUMN_NAME, axis=1).fillna('Total')
 
-subtotals = get_totals(merged_dataset, 
+totals = get_totals(merged_dataset, 
                        ['legal_entity', 'counter_party', 'tier'], 
                        {'rating': 'max', 'value_ARAP': 'sum', 'value_ACCR': 'sum'}
                       )
 
-subtotals.rename(columns={"rating": "rating_MAX"}).to_csv('output.csv', index=False)
+totals.rename(columns={"rating": "rating_MAX"}).to_csv('output.csv', index=False)
 
 
 
