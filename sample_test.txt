@@ -1,8 +1,4 @@
-Please do the same exercise using two different frameworks.
-
-Framework 1. pandas
-framework 2. apache beam python https://beam.apache.org/documentation/sdks/python/
-
+Please do the following exercise using pandas.
 
 using two input files dataset1 and dataset2 
 
